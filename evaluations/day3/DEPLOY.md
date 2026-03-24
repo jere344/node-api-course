@@ -1,5 +1,13 @@
 # Deploy On Render
 
+https://node-api-course-3fyl.onrender.com/api-docs/
+
+Admin :
+    nom: "Admin",
+    email: "admin@biblio.dev",
+    password: "Admin1234"
+    role: "admin"
+
 ## 1. Service setup
 
 - Create a **Web Service** on Render from this repository.
@@ -24,17 +32,7 @@ Notes:
 - `PORT` is injected by Render automatically.
 - With SQLite, use a persistent disk mounted at `/var/data` so data survives restarts.
 
-## 3. Prisma in production
-
-The start script runs:
-
-```bash
-prisma migrate deploy && node src/index.js
-```
-
-This applies committed migrations before starting the API.
-
-## 4. Health checks
+## 3. Health checks
 
 After deploy, verify:
 
